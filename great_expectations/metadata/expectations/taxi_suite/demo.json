@@ -55,38 +55,12 @@
       "expectation_type": "expect_column_values_to_not_be_null",
       "kwargs": {
         "column": "passenger_count"
-      },
-      "meta": {
-        "profiler_details": {
-          "metric_configuration": {
-            "domain_kwargs": {
-              "column": "passenger_count"
-            },
-            "metric_dependencies": null,
-            "metric_name": "column_values.nonnull.unexpected_count",
-            "metric_value_kwargs": null
-          },
-          "num_batches": 1
-        }
       }
     },
     {
       "expectation_type": "expect_column_values_to_not_be_null",
       "kwargs": {
         "column": "store_and_fwd_flag"
-      },
-      "meta": {
-        "profiler_details": {
-          "metric_configuration": {
-            "domain_kwargs": {
-              "column": "store_and_fwd_flag"
-            },
-            "metric_dependencies": null,
-            "metric_name": "column_values.nonnull.unexpected_count",
-            "metric_value_kwargs": null
-          },
-          "num_batches": 1
-        }
       }
     },
     {
@@ -97,19 +71,6 @@
         "min_value": 1,
         "strict_max": false,
         "strict_min": false
-      },
-      "meta": {
-        "profiler_details": {
-          "metric_configuration": {
-            "domain_kwargs": {
-              "column": "passenger_count"
-            },
-            "metric_dependencies": null,
-            "metric_name": "column.min",
-            "metric_value_kwargs": null
-          },
-          "num_batches": 1
-        }
       }
     },
     {
