@@ -26,4 +26,4 @@ The above checkpoint is just placeholder for batch information, which we will be
 - Pass the DF to the BatchRequest Created for Great_expectations.
 - Pass BatchRequest and checkpoint to context
 - Validate the data through context config
-- Open the data doc in browser for report (file:///<path-to-this repo>/great_expectations/metadata/uncommitted/data_docs/local_site/index.html)
+- Open the data doc in browser for report (file:///`<path-to-this repo>`/great_expectations/metadata/uncommitted/data_docs/local_site/index.html)
