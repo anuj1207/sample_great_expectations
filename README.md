@@ -46,3 +46,16 @@ The above checkpoint is just placeholder for batch information, which we will be
 - Creates a Great Expectation DF (a wrapper over Spark DF)
 - Calls the expectations using the API methods over the Great Expectation DF
 - Prints the output in console
+
+### 3. Using Spark DataFrame great expectations python API with expectattion JSON files
+
+#### Execution:
+- Run API validation file
+  - python3 df_api_json_validation.py
+
+#### Flow:
+- Reads the data from `sample-data` and creates a Spark DF.
+- Creates a Great Expectation DF (a wrapper over Spark DF)
+- Calls the validation API method with the provided expectations JSON file path over the Great Expectation DF
+- Prints the output in console
+s
