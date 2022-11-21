@@ -1,10 +1,10 @@
 from pyspark.sql import DataFrame
 
-import great_expectations as ge
+from pyspark.sql import SparkSession
 
 
 def create_spark_session():
-    spark = ge.core.util.get_or_create_spark_application()
+    spark = SparkSession.builder.appName("My GE App").getOrCreate()
     return spark
 
 
