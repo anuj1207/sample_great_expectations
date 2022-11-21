@@ -11,3 +11,10 @@ def create_spark_session():
 def read_csv(spark, path) -> DataFrame:
     df = spark.read.option("header", "true").option("inferSchema", "true").csv(path)
     return df
+
+
+def create_sample_df(spark) -> DataFrame:
+    data = [("jackal", 1), ("mikeson", 21)]
+    columns = ["name", "id"]
+    df = spark.createDataFrame(data).toDF(*columns)
+    return df
