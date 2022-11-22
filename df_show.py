@@ -1,17 +1,18 @@
-# This is a sample Python script.
+import logging
 
-# Press ⌃R to execute it or replace it with your code.
-# Press Double ⇧ to search everywhere for classes, files, tool windows, actions, and settings.
+logging.basicConfig(level=logging.DEBUG)
+logger = logging.getLogger(__name__)
+# logger.setLevel(logging.DEBUG)
+data = [("mike", 1), ("bond", 700)]
+columns = ["name", "code"]
 
-from util import create_spark_session, create_sample_df
+print("creating DF from data: ", data)
 
-data_path = "sample-data/yellow_tripdata_sample_2019-01.csv"
+df = spark.createDataFrame(data).toDF(*columns)
 
+# print("DataFrame is created. Showing it now.")
+logger.info("DataFrame is created. Showing it now in logging.")
 
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    df = create_sample_df(spark)
-    df.show()
-    spark.stop()
+df.show()
 
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+print("collecting data now", df.collect())
