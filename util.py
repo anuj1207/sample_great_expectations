@@ -4,7 +4,7 @@ from pyspark.sql import SparkSession
 
 
 def create_spark_session():
-    spark = SparkSession.builder.appName("My GE App").getOrCreate()
+    spark = SparkSession.builder.getOrCreate()
     return spark
 
 
@@ -13,7 +13,7 @@ def read_csv(spark, path) -> DataFrame:
     return df
 
 
-def create_sample_df() -> DataFrame:
+def create_sample_df(spark) -> DataFrame:
     data = [("jackal", 1), ("mikeson", 21)]
     columns = ["name", "id"]
     df = spark.createDataFrame(data).toDF(*columns)
