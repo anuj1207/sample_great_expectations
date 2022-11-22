@@ -13,7 +13,7 @@ def read_csv(spark, path) -> DataFrame:
     return df
 
 
-def create_sample_df(spark) -> DataFrame:
+def create_sample_df() -> DataFrame:
     data = [("jackal", 1), ("mikeson", 21)]
     columns = ["name", "id"]
     df = spark.createDataFrame(data).toDF(*columns)

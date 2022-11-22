@@ -10,9 +10,8 @@ data_path = "sample-data/yellow_tripdata_sample_2019-01.csv"
 
 # Press the green button in the gutter to run the script.
 if __name__ == '__main__':
-    spark = create_spark_session()
-    df = create_sample_df(spark)
+    df = create_sample_df
     df.show()
-    spark.stop()
+    # spark.stop()
 
 # See PyCharm help at https://www.jetbrains.com/help/pycharm/
